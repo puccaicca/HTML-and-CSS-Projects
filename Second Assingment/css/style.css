@@ -1,0 +1,17 @@
+body {
+    background-color: lightblue;
+}
+
+p {
+    color: darkblue;
+}
+
+h3 {
+    text-align: center;
+}
+
+.logo {
+    border: red dashed 2px;
+    height: 320px;
+    width: 600px;
+}
