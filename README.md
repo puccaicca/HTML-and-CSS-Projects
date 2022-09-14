@@ -1,18 +1,20 @@
 **HTML AND CSS PROJECTS**
-This is a display of sample websites that I made using HTML and CSS.
+<br>This is a display of sample websites that I made using HTML and CSS.
 
 **PROJECTS**
-Movie Theatre Website
-Portfolio Website
-Space Station Website
+<ul>
+<li>Movie Theatre Website</li>
+<br><li>Portfolio Website</li>
+<br><li>Space Station Website</li>
+</ul>
 
 as well as other assignments
 
-Movie Theatre Website
-an example website using Bootstrap4 
+<strong>Movie Theatre Website</strong>
+<br>an example website using Bootstrap4 
 
-Space Station Website
-example website styled using CSS
+<strong>Space Station Website</strong>
+<br>example website styled using CSS
 
-Portfolio Website
-example portfolio website using CSS and HTML
+<strong>Portfolio Website</strong>
+<br>example portfolio website using CSS and HTML
