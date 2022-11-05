@@ -3,6 +3,7 @@
     <head>
 		<meta charset="utf-8">
 		<title>Lilian's Cafe | Yummy Drinks for All!</title>
+        <script src="JS/one_page_website.js" defer></script>
         <link rel="stylesheet" href="./css/one_page_website.css">
 	</head>
 	<body>
@@ -42,23 +43,83 @@
 		
         <!-- END ABOUT US -->
 
-        <!-- MENU -->
-        
-        <div id="menu">
-            <h2>Menu</h2>
-            <p>Check out our delicious menu!</p>
 
-            <h3>Black Sugar Bubble Tea</h3>
-            <img src="images/black-sugar-bubble-tea.jpg" alt="black sugar bubble tea">
+        <!-- MENU / IMAGE GALLERY -->
+<div id="menu">
+    <h2>Menu</h2>
+    <p>Check out our delicious drinks!!</p>
+        <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="images/sugar_thumb.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/matcha_thumb.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="images/thai_thumb.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+        <img src="images/peach_thumb.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+      </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="images/black-sugar-bubble-tea.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="images/matcha.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="images/thai.jpg" style="width:100%">
+      </div>
 
-            <h3>Lychee Yakult Bubble Tea</h3>
-            <img src="images/yakult.PNG" alt="lychee yakult bubble tea">
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="images/peach.jpg" style="width:100%">
+      </div>
+  
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="images/sugar_thumb.jpg" onclick="currentSlide(1)" alt="Black sugar boba">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="images/matcha_thumb.jpg" onclick="currentSlide(2)" alt="Matcha bubble tea">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="images/thai_thumb.jpg" onclick="currentSlide(3)" alt="Thai milk bubble tea">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="images/peach_thumb.jpg" onclick="currentSlide(4)" alt="Peach Yogurt tea">
+      </div>
+    </div>
+  </div>
+  </div>
 
-            <h3>Passionfruit Bubble Tea</h3>
-            <img src="images/passion fruit bubble tea.PNG" alt="passionfruit bubble tea">
-        </div>
-
-        <!-- END MENU -->
+  <!-- END IMAGE GALLERY -->
 
         <!-- CONTACT -->
 
