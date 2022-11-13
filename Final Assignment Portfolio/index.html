@@ -14,10 +14,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Enriqueta&display=swap" rel="stylesheet">
+
+        <script src="js/portfolio.js" defer></script>
     </head>
 
     <!--Body-->
     <body class="Background">
+
+    
         
         <!--Navbar-->
         <div class="Navbar">
@@ -82,10 +86,10 @@
             <!--Left column-->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p>
+                <p class="center">
                     You can view my coding projects on my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/puccaicca" target="_blank">The Tech Academy Github</a></p>
+                    <p class="center"><a href="https://github.com/puccaicca" target="_blank">Lilian's Github</a></p>
                 </p>
             </div>
             <!--Right column-->
@@ -104,11 +108,13 @@
             <div class="Column_1 Column_tall">
                 <h1>Contact</h1>
                 <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <form name ="myForm" action="/action_page.php" onsubmit="return validateForm()" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" id="Name" name ="Name" placeholder="Please enter your name here">
                     <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here"><br>
+                    <label>Phone Number:</label>
+                        <input type="text" id="Phone" name="Phone" placeholder="Please enter your phone number here"><br>
                     <label>Message:</label>
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                         <input type="submit" value="SUBMIT">
@@ -116,12 +122,38 @@
             </div>
         </div>
 
+        <!-- A button to open the popup form -->
+        <button class="open-button" onclick="openForm()">Open Form</button>
+
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+        </div>
+
         <!--Footer section-->
         <footer>
-            <p>
                 <p class="center">&copy Lilian Tan, <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
                 <br>
             </p>
         </footer>
+
+        <script>
+            document.body.classList.add('fade-out');
+            window.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+            });
+    
+        </script>
     </body>
 </html>
