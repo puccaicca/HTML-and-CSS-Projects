@@ -2,6 +2,7 @@
 
 html {
     background-color: black;
+    scroll-behavior: smooth; /* smooth scrolling to bookmarks */
 }
 
 /* Body */
@@ -309,7 +310,7 @@ form {
 
 /* POPUP FORM STYLING */
 
-{box-sizing: border-box;}
+* {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -380,3 +381,38 @@ form {
 }
 
 /* END OF POPUP FORM */
+
+/* Utlize keyframe rule to animate footer */
+
+.footer {
+    position: relative;
+    animation: mymove 10s infinite;
+}
+
+@keyframes mymove {
+    from {right: 0px;}
+    to {left: 600px;}
+  }
+
+/* end animation footer */
+
+/* slideshow css */
+
+#slideshow { 
+    margin: 0px auto; 
+    position: relative; 
+    padding: 10px; 
+    /* box-shadow: 0 0 20px rgba(0,0,0,0.4); */
+  }
+  
+  #slideshow > div { 
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+  }
+
+  /* end slideshow css */
+  
+  
